@@ -3,7 +3,7 @@ name: Deploy Lambda Function
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy_lambda:
@@ -37,4 +37,4 @@ jobs:
         run: |
           npm run build 
           zip -j deploy.zip ./dist/*
-          aws lambda update-function-code --function-name=node --zip-file=fileb://deploy.zip
+          aws lambda update-function-code --function-name=test123 --zip-file=fileb://deploy.zip
